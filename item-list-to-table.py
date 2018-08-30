@@ -15,7 +15,7 @@ i=0
 while i < len(item_list):
     html_string += "\n<tr><th>" + item_list[i]["url_name"] + "</th><th>" + item_list[i]["item_name"] + "</th><th>" + item_list[i]["id"] + "</th></tr>"
     i += 1
-    #print(i)
+    print(i)
 
 html_string += "</table></body></html>"
 

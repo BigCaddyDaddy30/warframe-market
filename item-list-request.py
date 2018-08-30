@@ -2,13 +2,13 @@
 import requests
 import json
 
-
+#variable for the url
 URL = "https://api.warframe.market/v1/items"
 
-
+#this is the http request to the api 
 client = requests.session()
 
-
+#this parses in the JSON file to a list of dictionaries in python
 item_list = json.loads(client.get(URL).text)['payload']['items']['en']
 
 
