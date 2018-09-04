@@ -30,7 +30,7 @@ while i < len(item_list):
 
     j=0
     while j < len(order_list):
-        csvwriter.writerow([order_list[j]['quantity'], order_list[j]['creation_date'], order_list[j]['order_type'], order_list[j]['platform'], order_list[j]['platinum'], order_list[j]['region'], order_list[j]['last_update'], order_list[j]['id'], item_list[i]['item_name']])
+        csvwriter.writerow([order_list[j]['quantity'], order_list[j]['creation_date'], order_list[j]['order_type'].encode('utf-8'), order_list[j]['platform'].encode('utf-8'), order_list[j]['platinum'], order_list[j]['region'].encode('utf-8'), order_list[j]['last_update'], order_list[j]['id'].encode('utf-8'), item_list[i]['item_name'].encode('utf-8')])
         j += 1 
         
     i += 1
