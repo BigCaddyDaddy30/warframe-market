@@ -23,13 +23,13 @@ item_list_jsonfile.write(json.dumps(item_list, indent=2, sort_keys=True))
 item_list_jsonfile.close()
 
 
-master_csv = open('/master_output.csv', 'a')
+master_csv = open('master_output.csv', 'a')
 csvwriter = csv.writer(master_csv)
 
 #Start grabbing all items
 i=0
 while i < len(item_list):
-    URL = "https://api.warframe.market/v1/items/" + item_list['url_name'][i] + "/orders"
+    URL = "https://api.warframe.market/v1/items/" + item_list[i]['url_name'] + "/orders"
     order_list = json.loads(client.get(URL).text)['payload']['orders']
     j=0
     while j < len(order_list):
@@ -39,6 +39,7 @@ while i < len(item_list):
         csvwriter.writerow(order_list[j].values())
         j += 1 
     i += 1
+    print(i)
 
 master_csv.close()
         
