@@ -1,6 +1,7 @@
 import requests
 import json
 import csv
+import time
 
 
 #variable for the url
@@ -34,6 +35,7 @@ while i < len(item_list):
         j += 1 
         
     i += 1
+    time.sleep(.100)
     print(i)
 
 master_csv.close()
