@@ -35,7 +35,7 @@ while i < len(item_list):
         j += 1 
         
     i += 1
-    time.sleep(.100)
+    time.sleep(.120)
     print(i)
 
 master_csv.close()
